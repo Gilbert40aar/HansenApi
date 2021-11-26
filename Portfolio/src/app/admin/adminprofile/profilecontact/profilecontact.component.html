@@ -1,0 +1,27 @@
+<div class="page-header">
+  <h2 class="header-title">Profile Contact</h2>
+  <div class="btn-row">
+    <a routerLink="../profile" class="btn">Profile Info</a>
+    <a routerLink="../location" class="btn"><i class="fa fa-address-card-o"></i></a>
+    <a routerLink="../status" class="btn"><i class="fa fa-briefcase"></i></a>
+    <a routerLink="../contact" class="btn"><i class="fa fa-phone"></i></a>
+  </div>
+</div>
+<form [formGroup]="contactForm">
+  <div class="container-row">
+      <div class="col">
+          <div class="form-group">
+              <label>Phone Number</label>
+              <input type="text" formControlName="phone" id="" class="form-control">
+          </div>
+          <div class="form-group">
+              <label>Email</label>
+              <input type="text" formControlName="email" id="" class="form-control">
+          </div>
+      </div>
+  </div>
+  <div class="btn-row">
+      <button type="submit" (click)="contactHandler(contactForm.value)" class="btn btn-create">Save Details</button>
+      <button type="reset" class="btn btn-clear">Clear Details</button>
+  </div>
+</form>

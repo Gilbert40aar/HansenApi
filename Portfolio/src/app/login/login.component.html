@@ -1,0 +1,27 @@
+<div class="container-center">
+  <section class="card">
+    <section class="card-body" id="row">
+      <!-- <img src="assets/img/shiftwork.jpg" class="login-logo"> -->
+      <div class="login-body">
+        <span class="brand"><h1 class="logo-brand"><i class="fa fa-sign-in"></i>Administrator Login</h1></span>
+        <form [formGroup]="loginForm">
+          <div class="form-group-inline">
+            <div class="input-group">
+              <span class="fa fa-envelope"></span>
+              <input type="text" formControlName="username" id="" placeholder="username" class="form-control">
+            </div>
+          </div>
+          <div class="form-group-inline">
+            <div class="input-group">
+              <span class="fa fa-key"></span>
+              <input type="password" formControlName="password" id="" placeholder="password" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" (click)="loginHandler(loginForm.value)" class="btn-login">Sign in</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </section>
+</div>

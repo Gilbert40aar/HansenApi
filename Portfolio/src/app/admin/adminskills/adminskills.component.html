@@ -1,0 +1,32 @@
+<form [formGroup]="skillsForm">
+<div class="page-header">
+  <h2 class="header-title">Skills Center</h2>
+  <div class="btn-row">
+    <a routerLink="../skills" class="btn">Skills Center</a>
+    <a routerLink="../createSkill" class="btn"><i class="fa fa-bar-chart-o"></i></a>
+    <a routerLink="../editSkill" (click)="editSkill(skillsForm.value)" class="btn"><i class="fa fa-pencil"></i></a>
+    <a routerLink="../deleteSkill" (click)="deleteSkills(skillsForm.value)" class="btn"><i class="fa fa-trash"></i></a>
+  </div>
+</div>
+<table class="table-borderless">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Icon</th>
+      <th>Title</th>
+      <th>Points</th>
+      <th>Bar</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let item of skillslist">
+      <td><input type="radio" formControlName="skillsId" [value]="item.skillsId"></td>
+      <td><i class="{{item.skillsIcon}}"></i></td>
+      <td>{{item.skillsTitle}}</td>
+      <td>{{item.skillsPoints}}</td>
+      <td><meter min="0" max="100" value="{{item.skillsPoints}}"></meter></td>
+    </tr>
+  </tbody>
+</table>
+</form>

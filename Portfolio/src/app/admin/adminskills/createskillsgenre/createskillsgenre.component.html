@@ -1,0 +1,23 @@
+<div class="page-header">
+  <h2 class="header-title">Create Skill Genre</h2>
+  <div class="btn-row">
+    <a routerLink="../skills" class="btn">Skills Center</a>
+    <a routerLink="../createSkill" class="btn"><i class="fa fa-bar-chart-o"></i></a>
+    <a routerLink="../editSkill" class="btn"><i class="fa fa-pencil"></i></a>
+    <a routerLink="../deleteSkill" class="btn"><i class="fa fa-trash"></i></a>
+  </div>
+</div>
+<form [formGroup]="genreForm">
+  <div class="container-row">
+      <div class="col">
+          <div class="form-group">
+              <label>Skill Genre</label>
+              <input type="text" formControlName="skillsTitle" id="" class="form-control">
+          </div>
+      </div>
+  </div>
+  <div class="btn-row">
+      <button type="submit" (click)="skillGenreHandler(genreForm.value)" class="btn btn-create">Update Details</button>
+      <button type="reset" class="btn btn-clear">Clear Details</button>
+  </div>
+  </form>

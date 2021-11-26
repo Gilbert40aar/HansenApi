@@ -1,0 +1,34 @@
+<form [formGroup]="editForm">
+  <div class="page-header">
+    <h2 class="header-title">Education</h2>
+    <div class="btn-row">
+      <a routerLink="../education" class="btn">Education Overview</a>
+      <a routerLink="../addEducation" class="btn"><i class="fa fa-plus"></i></a>
+      <a routerLink="../editEducation" (click)="editEducation(editForm.value)" class="btn"><i class="fa fa-pencil"></i></a>
+      <a routerLink="../education" (click)="deleteEducation(editForm.value)" class="btn"><i class="fa fa-trash"></i></a>
+    </div>
+  </div>
+  <table class="table-borderless">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>School</th>
+        <th>City</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let item of educationlist">
+        <td><input type="radio" formControlName="educationId" [value]="item.educationId"></td>
+        <td>{{item.educationTitle}}</td>
+        <td>{{item.school}}</td>
+        <td>{{item.city}}</td>
+        <td>{{item.startDate}}</td>
+        <td>{{item.endDate}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </form>

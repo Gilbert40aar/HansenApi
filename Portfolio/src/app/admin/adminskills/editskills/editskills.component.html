@@ -1,0 +1,47 @@
+<div class="page-header">
+  <h2 class="header-title">Edit Skill</h2>
+  <div class="btn-row">
+    <a routerLink="../skills" class="btn">Skills Center</a>
+    <a routerLink="../createSkill" class="btn"><i class="fa fa-bar-chart-o"></i></a>
+    <a routerLink="../editSkill" class="btn"><i class="fa fa-pencil"></i></a>
+    <a routerLink="../deleteSkill" class="btn"><i class="fa fa-trash"></i></a>
+  </div>
+</div>
+<form [formGroup]="skillsForm">
+  <div class="container-row">
+      <div class="col">
+          <div class="form-group">
+              <label>Skill Genre</label>
+              <input type="text" formControlName="skillsTitle" value="{{skill.skillsTitle}}" id="" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Skills Icon</label>
+            <select formControlName="skillsIcon" class="form-control">
+              <option>Select Skills Icon here</option>
+              <option value="fa fa-code"[selected]="skill.skillsIcon == 'fa fa-code'">Csharp</option>
+              <option value="fa fa-css3" [selected]="skill.skillsIcon == 'fa fa-css3'">CSS3</option>
+              <option value="fa fa-html5" [selected]="skill.skillsIcon == 'fa fa-html5'">HTML5</option>
+              <option value="fa fa-github" [selected]="skill.skillsIcon == 'fa fa-github'">Github</option>
+              <option value="fa fa-wordpress" [selected]="skill.skillsIcon == 'fa fa-wordpress'">Wordpress</option>
+              <option value="fa fa-code" [selected]="skill.skillsIcon == 'fa fa-code'">PHP</option>
+              <option value="fa fa-code" [selected]="skill.skillsIcon == 'fa fa-code'">Python</option>
+              <option value="fa fa-code" [selected]="skill.skillsIcon == 'fa fa-code'">Javascript</option>
+              <option value="fa fa-code" [selected]="skill.skillsIcon == 'fa fa-code'">Typescript</option>
+              <option value="fa fa-codepen" [selected]="skill.skillsIcon == 'fa fa-codepen'">Angular</option>
+              <option value="fa fa-code" [selected]="skill.skillsIcon == 'fa fa-code'">React</option>
+              <option value="fa fa-code" [selected]="skill.skillsIcon == 'fa fa-code'">Vue.js</option>
+              <option value="fa fa-code" [selected]="skill.skillsIcon == 'fa fa-code'">API</option>
+              <option value="fa fa-font-awesome">Font Awesome</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Skill Points</label>
+            <input type="text" formControlName="skillsPoints" value="{{skill.skillsPoints}}" class="form-control">
+          </div>
+      </div>
+  </div>
+  <div class="btn-row">
+      <button type="submit" (click)="skillsHandler(skillsForm.value)" class="btn btn-create">Update Details</button>
+      <button type="reset" class="btn btn-clear">Clear Details</button>
+  </div>
+  </form>

@@ -1,0 +1,40 @@
+<div class="container-center">
+  <section class="card">
+    <section class="card-body" id="row">
+      <!-- <img src="assets/img/shiftwork.jpg" class="login-logo"> -->
+      <div class="login-body">
+        <span class="brand"><h1 class="logo-brand"><i class="fa fa-address-card-o"></i>Administrator Setup</h1></span>
+        <form [formGroup]="setupForm">
+          <div class="form-group-inline">
+            <div class="input-group">
+              <span class="fa fa-envelope"></span>
+              <input type="text" formControlName="userName" placeholder="username" class="form-control">
+            </div>
+          </div>
+          <div class="form-group-inline">
+            <div class="input-group">
+              <span class="fa fa-key"></span>
+              <input type="password" formControlName="passWord" placeholder="password" class="form-control">
+            </div>
+          </div>
+          <div class="form-group-inline">
+            <div class="input-group">
+              <span class="fa fa-user"></span>
+              <input type="text" formControlName="firstName" placeholder="firstname" class="form-control">
+            </div>
+          </div>
+          <div class="form-group-inline">
+            <div class="input-group">
+              <span class="fa fa-user"></span>
+              <input type="text" formControlName="lastName" placeholder="lastname" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" (click)="submitHandler(setupForm.value)" class="btn-login">Sign Up</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </section>
+</div>
+

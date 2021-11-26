@@ -1,0 +1,165 @@
+<div class="row" id="row-center">
+  <h1 class="pageTitle"><span class="text-box text-black">My</span><span class="text-box text-red">Resume</span></h1>
+</div>
+<div class="row" id="row-center">
+  <p>
+    In a professional context it often happen that private clients corder a publication to be made.
+  </p>
+</div>
+<div class="row" id="row-center">
+  <div class="resume-flex">
+    <div class="resume-col">
+      <span class="resume-headline">
+        <h2>
+          <i class="fa fa-graduation-cap"></i>
+          <span class="headline">Education</span>
+        </h2>
+      </span>
+      <ul class="timeline">
+        <li class="timeline-item">
+          <span class="timeline-box">
+            <p class="timeline-header">Master In Computer Science</p>
+            <p class="timeline-years">2008 - 2012</p>
+            <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare.</p>
+          </span>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-box">
+            <p class="timeline-header">Master In Computer Science</p>
+            <p class="timeline-years">2008 - 2012</p>
+            <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare.</p>
+          </span>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-box">
+            <p class="timeline-header">Master In Computer Science</p>
+            <p class="timeline-years">2008 - 2012</p>
+            <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare.</p>
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div class="resume-col">
+      <span class="resume-headline">
+        <h2>
+          <i class="fa fa-pencil"></i>
+          <span class="headline">Experience</span>
+        </h2>
+      </span>
+      <ul class="timeline">
+        <li class="timeline-item">
+          <span class="timeline-box">
+            <p class="timeline-header">Master In Computer Science</p>
+            <p class="timeline-years">2008 - 2012</p>
+            <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare.</p>
+          </span>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-box">
+            <p class="timeline-header">Master In Computer Science</p>
+            <p class="timeline-years">2008 - 2012</p>
+            <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare.</p>
+          </span>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-box">
+            <p class="timeline-header">Master In Computer Science</p>
+            <p class="timeline-years">2008 - 2012</p>
+            <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare.</p>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="row" id="row-center">
+  <div class="skills-flex">
+    <div class="skills-col">
+      <span class="skills-headline">
+        <h2>
+          <i class="fa fa-bar-chart-o"></i>
+          <span class="headline">Work Skills</span>
+        </h2>
+      </span>
+      <div class="skills-box">
+        <div class="skill-group" *ngFor="let item of skills">
+          <div class="label-group">
+            <label>{{item.skillsTitle}}</label><span>{{item.skillsPoints}}%</span>
+          </div>
+          <meter min="0" max="100"  value="{{item.skillsPoints}}"></meter>
+        </div>
+        <div class="skill-group">
+          <div class="label-group">
+            <label>CSS3</label><span>60%</span>
+          </div>
+          <meter min="0" max="100"  value="60"></meter>
+        </div>
+        <div class="skill-group">
+          <div class="label-group">
+            <label>JQuery</label><span>40%</span>
+          </div>
+          <meter min="0" max="100"  value="40"></meter>
+        </div>
+        <div class="skill-group">
+          <div class="label-group">
+            <label>Angular</label><span>40%</span>
+          </div>
+          <meter min="0" max="100"  value="40"></meter>
+        </div>
+      </div>
+    </div>
+    <div class="skills-col">
+      <span class="skills-headline">
+        <h2>
+          <i class="fa fa-language"></i>
+          <span class="headline">Language Skills</span>
+        </h2>
+      </span>
+      <div class="skills-box">
+        <div class="skill-group">
+          <div class="label-group">
+            <label>Danish<small> <i>Fluent</i></small></label>
+            <span>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+            </span>
+          </div>
+          <div class="label-group">
+            <label>English<small> <i>Fluent</i></small></label>
+            <span>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+            </span>
+          </div>
+          <div class="label-group">
+            <label>Swedish<small> <i>Understand</i></small></label>
+            <span>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+            </span>
+          </div>
+          <div class="label-group">
+            <label>Norwegian<small> <i>Understand</i></small></label>
+            <span>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

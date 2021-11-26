@@ -1,0 +1,34 @@
+<form [formGroup]="editForm">
+<div class="page-header">
+  <h2 class="header-title">Work Experience</h2>
+  <div class="btn-row">
+    <a routerLink="../work" class="btn">Work Overview</a>
+    <a routerLink="../addWork" class="btn"><i class="fa fa-plus"></i></a>
+    <a routerLink="../editWork" (click)="editWork(editForm.value)" class="btn"><i class="fa fa-pencil"></i></a>
+    <a routerLink="../work" (click)="deleteWork(editForm.value)" class="btn"><i class="fa fa-trash"></i></a>
+  </div>
+</div>
+<table class="table-borderless">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th>Company</th>
+      <th>City</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let item of worklist">
+      <td><input type="radio" formControlName="workId" [value]="item.workId"></td>
+      <td>{{item.workTitle}}</td>
+      <td>{{item.company}}</td>
+      <td>{{item.city}}</td>
+      <td>{{item.startDate}}</td>
+      <td>{{item.endDate}}</td>
+    </tr>
+  </tbody>
+</table>
+</form>

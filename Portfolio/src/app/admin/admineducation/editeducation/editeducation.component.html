@@ -1,0 +1,63 @@
+<div class="page-header">
+  <h2 class="header-title">Edit Education</h2>
+  <div class="btn-row">
+    <a routerLink="../education" class="btn">Education Overview</a>
+    <a routerLink="../addEducation" class="btn"><i class="fa fa-plus"></i></a>
+  </div>
+</div>
+<form [formGroup]="eduForm">
+  <div class="container-row">
+      <div class="col">
+          <div class="form-group">
+              <label>Education</label>
+              <input type="text" formControlName="educationTitle" value="{{edu.educationTitle" id="" class="form-control">
+          </div>
+          <div class="form-group">
+              <label>School</label>
+              <input type="text" formControlName="school" value="{{edu.school}}" id="" class="form-control">
+          </div>
+          <div class="form-group">
+              <label>Address</label>
+              <input type="text" formControlName="addRess" value="{{edu.addRess}}" id="" class="form-control">
+          </div>
+          <div class="form-group">
+              <label>Zipcode</label>
+              <input type="text" formControlName="zipCode" value="{{edu.zipCode}}" class="form-control">
+          </div>
+          <div class="form-group">
+              <label>City</label>
+              <input type="text" formControlName="city" value="{{edu.city}}" id="" class="form-control">
+          </div>
+      </div>
+      <div class="col">
+          <div class="form-group">
+              <label>Start Date</label>
+              <input type="date" formControlName="startDate" value="{{edu.startDate}}" id="" class="form-control">
+          </div>
+          <div class="form-group">
+              <label>End Date</label>
+              <input type="date" formControlName="endDate" value="{{edu.endDate}}" id="" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Courses</label>
+            <input type="text" formControlName="courses" value="{{edu.courses}}" id="" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Internship</label>
+            <input type="text" formControlName="internship" value="{{edu.internship}}" class="form-control">
+        </div>
+      </div>
+  </div>
+  <div class="container-row">
+      <div class="col">
+          <div class="form-group">
+              <label>About</label>
+              <textarea formControlName="descripTion" value="{{edu.descripTion}}" class="form-control"></textarea>
+          </div>
+      </div>
+  </div>
+  <div class="btn-row">
+      <button type="submit" (click)="educationHandler(eduForm.value)" class="btn btn-create">Update Details</button>
+      <button type="reset" class="btn btn-clear">Clear Details</button>
+  </div>
+  </form>

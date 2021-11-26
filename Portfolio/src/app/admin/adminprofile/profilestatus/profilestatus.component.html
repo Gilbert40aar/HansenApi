@@ -1,0 +1,27 @@
+<div class="page-header">
+  <h2 class="header-title">Profile Status</h2>
+  <div class="btn-row">
+    <a routerLink="../profile" class="btn">Profile Info</a>
+    <a routerLink="../location" class="btn"><i class="fa fa-address-card-o"></i></a>
+    <a routerLink="../status" class="btn"><i class="fa fa-briefcase"></i></a>
+    <a routerLink="../contact" class="btn"><i class="fa fa-phone"></i></a>
+  </div>
+</div>
+<form [formGroup]="statusForm">
+  <div class="container-row">
+      <div class="col">
+          <div class="form-group">
+              <label>Work</label>
+              <input type="text" formControlName="work" id="" class="form-control">
+          </div>
+          <div class="form-group">
+              <label>Employee</label>
+              <input type="text" formControlName="employee" id="" class="form-control">
+          </div>
+      </div>
+  </div>
+  <div class="btn-row">
+      <button type="submit" (click)="statusHandler(statusForm.value)" class="btn btn-create">Save Details</button>
+      <button type="reset" class="btn btn-clear">Clear Details</button>
+  </div>
+  </form>
