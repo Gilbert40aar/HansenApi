@@ -35,6 +35,7 @@ import { AboutComponent } from './home/about/about.component';
 import { ResumeComponent } from './home/resume/resume.component';
 import { WorksComponent } from './home/works/works.component';
 import { JwtModule } from '@auth0/angular-jwt';
+import { ContactComponent } from './home/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { JwtModule } from '@auth0/angular-jwt';
     FrontpageComponent,
     AboutComponent,
     ResumeComponent,
-    WorksComponent
+    WorksComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

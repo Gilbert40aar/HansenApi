@@ -1136,6 +1136,88 @@ body {
   font-weight: 500;
 }
 
+/* Here will the styling for the contact page be made. */
+.container-home .main-content .row#row-center .contact-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 0 200px;
+  margin-bottom: 30px;
+}
+
+.container-home .main-content .row#row-center .contact-container .contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+}
+
+.container-home .main-content .row#row-center .contact-container .contact-item i {
+  color: var(--text-ruby-red);
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.container-home .main-content .row#row-center .contact-container .contact-item label {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.container-home .main-content .row#row-center .contact-container .contact-item span {
+  font-size: 12px;
+}
+
+.container-home .main-content .row#row-center .form-container {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+}
+
+.container-home .main-content .row#row-center .form-container form {
+  width: 100%;
+}
+
+.container-home .main-content .row#row-center .form-container form .input-group {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.container-home .main-content .row#row-center .form-container .input-group .form-control {
+  flex: 1;
+  padding: 10px 15px;
+  margin-right: 35px;
+  border-radius: 20px;
+  border: 0;
+  outline: none;
+  color: var(--text-ruby-red);
+}
+
+.container-home .main-content .row#row-center .form-container .input-group .form-control::placeholder {
+  color: #333;
+}
+
+.container-home .main-content .row#row-center .form-container .input-group .form-control:last-child {
+  margin-right: 0;
+}
+
+.container-home .main-content .row#row-center .form-container .input-group textarea.form-control {
+  width: 100%;
+  resize: none;
+  height: 200px;
+}
+
+.container-home .main-content .row#row-center .form-container form .btn {
+  padding: 10px 20px;
+  color: var(--text-light);
+  background-color: var(--bg-danger);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 160px;
+  border-radius: 20px;
+}
+
 /* This is for animation, Don't know if I turn it on yet */
 @keyframes animate {
   0% {

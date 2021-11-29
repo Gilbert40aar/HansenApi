@@ -18,6 +18,7 @@ import { CreateworkComponent } from './admin/adminwork/creatework/creatework.com
 import { EditworkComponent } from './admin/adminwork/editwork/editwork.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { AboutComponent } from './home/about/about.component';
+import { ContactComponent } from './home/contact/contact.component';
 import { FrontpageComponent } from './home/frontpage/frontpage.component';
 import { HomeComponent } from './home/home.component';
 import { ResumeComponent } from './home/resume/resume.component';
@@ -31,7 +32,8 @@ const routes: Routes = [
     {path: 'frontpage', component: FrontpageComponent},
     {path: 'about', component: AboutComponent},
     {path: 'resume', component: ResumeComponent},
-    {path: 'works', component: WorksComponent}
+    {path: 'works', component: WorksComponent},
+    {path: 'contact', component: ContactComponent}
   ]},
   {path: 'login', component: LoginComponent},
   {path: 'setup', component: SetupComponent},
