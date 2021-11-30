@@ -1,9 +1,9 @@
 export interface ILocation {
   locationId?: any;
-  addRess: string;
-  zipCode: string;
-  city: string;
-  country: string;
+  addRess?: string;
+  zipCode?: string;
+  city?: string;
+  country?: string;
 }
 /*
 "locationId": 1,

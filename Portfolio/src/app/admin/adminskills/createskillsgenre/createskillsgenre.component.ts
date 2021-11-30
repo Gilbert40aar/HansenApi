@@ -21,7 +21,7 @@ export class CreateskillsgenreComponent implements OnInit {
   }
 
   skillGenreHandler(genreObj: ISkillGenre) {
-    this.api.saveSkills(genreObj).subscribe(data => console.log(data));
+    this.api.saveSkills(genreObj).subscribe(data => data);
   }
 
 }

@@ -5,6 +5,8 @@ import { AdmineducationComponent } from './admin/admineducation/admineducation.c
 import { CreateeducationComponent } from './admin/admineducation/createeducation/createeducation.component';
 import { EditeducationComponent } from './admin/admineducation/editeducation/editeducation.component';
 import { AdminprofileComponent } from './admin/adminprofile/adminprofile.component';
+import { CreateprofileComponent } from './admin/adminprofile/createprofile/createprofile.component';
+import { EditprofileComponent } from './admin/adminprofile/editprofile/editprofile.component';
 import { ProfilecontactComponent } from './admin/adminprofile/profilecontact/profilecontact.component';
 import { ProfilelocationComponent } from './admin/adminprofile/profilelocation/profilelocation.component';
 import { ProfilestatusComponent } from './admin/adminprofile/profilestatus/profilestatus.component';
@@ -53,6 +55,8 @@ const routes: Routes = [
     {path: 'createSkill', component: CreateskillsComponent},
     {path: 'createSkillGenre', component: CreateskillsgenreComponent},
     {path: 'editSkill', component: EditskillsComponent},
+    {path: 'createprofile', component: CreateprofileComponent},
+    {path: 'editprofile', component: EditprofileComponent}
   ]}
 ];
 

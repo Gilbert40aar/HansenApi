@@ -1,4 +1,3 @@
-C:\Users\micha\source\repos\HansenApi\HansenApi\obj\Debug\net5.0\HansenApi.csproj.AssemblyReference.cache
 C:\Users\micha\source\repos\HansenApi\HansenApi\obj\Debug\net5.0\HansenApi.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\micha\source\repos\HansenApi\HansenApi\obj\Debug\net5.0\HansenApi.AssemblyInfoInputs.cache
 C:\Users\micha\source\repos\HansenApi\HansenApi\obj\Debug\net5.0\HansenApi.AssemblyInfo.cs
@@ -133,3 +132,4 @@ C:\Users\micha\source\repos\HansenApi\HansenApi\obj\Debug\net5.0\ref\HansenApi.d
 C:\Users\micha\source\repos\HansenApi\HansenApi\obj\Debug\net5.0\HansenApi.pdb
 C:\Users\micha\source\repos\HansenApi\HansenApi\obj\Debug\net5.0\HansenApi.genruntimeconfig.cache
 C:\Users\micha\source\repos\HansenApi\HansenApi\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\micha\source\repos\HansenApi\HansenApi\obj\Debug\net5.0\HansenApi.csproj.AssemblyReference.cache

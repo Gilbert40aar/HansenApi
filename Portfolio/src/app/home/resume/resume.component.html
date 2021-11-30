@@ -16,27 +16,7 @@
         </h2>
       </span>
       <ul class="timeline">
-        <li class="timeline-item">
-          <span class="timeline-box">
-            <p class="timeline-header">Master In Computer Science</p>
-            <p class="timeline-years">2008 - 2012</p>
-            <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare.</p>
-          </span>
-        </li>
-        <li class="timeline-item">
-          <span class="timeline-box">
-            <p class="timeline-header">Master In Computer Science</p>
-            <p class="timeline-years">2008 - 2012</p>
-            <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare.</p>
-          </span>
-        </li>
-        <li class="timeline-item">
-          <span class="timeline-box">
-            <p class="timeline-header">Master In Computer Science</p>
-            <p class="timeline-years">2008 - 2012</p>
-            <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare.</p>
-          </span>
-        </li>
+        <app-education *ngFor="let item of education" [education]="item"></app-education>
       </ul>
     </div>
     <div class="resume-col">
@@ -47,27 +27,7 @@
         </h2>
       </span>
       <ul class="timeline">
-        <li class="timeline-item">
-          <span class="timeline-box">
-            <p class="timeline-header">Master In Computer Science</p>
-            <p class="timeline-years">2008 - 2012</p>
-            <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare.</p>
-          </span>
-        </li>
-        <li class="timeline-item">
-          <span class="timeline-box">
-            <p class="timeline-header">Master In Computer Science</p>
-            <p class="timeline-years">2008 - 2012</p>
-            <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare.</p>
-          </span>
-        </li>
-        <li class="timeline-item">
-          <span class="timeline-box">
-            <p class="timeline-header">Master In Computer Science</p>
-            <p class="timeline-years">2008 - 2012</p>
-            <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare.</p>
-          </span>
-        </li>
+        <app-work *ngFor="let item of works" [work]="item"></app-work>
       </ul>
     </div>
   </div>

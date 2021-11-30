@@ -36,6 +36,10 @@ import { ResumeComponent } from './home/resume/resume.component';
 import { WorksComponent } from './home/works/works.component';
 import { JwtModule } from '@auth0/angular-jwt';
 import { ContactComponent } from './home/contact/contact.component';
+import { CreateprofileComponent } from './admin/adminprofile/createprofile/createprofile.component';
+import { EditprofileComponent } from './admin/adminprofile/editprofile/editprofile.component';
+import { EducationComponent } from './home/resume/education/education.component';
+import { WorkComponent } from './home/resume/work/work.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +73,11 @@ import { ContactComponent } from './home/contact/contact.component';
     AboutComponent,
     ResumeComponent,
     WorksComponent,
-    ContactComponent
+    ContactComponent,
+    CreateprofileComponent,
+    EditprofileComponent,
+    EducationComponent,
+    WorkComponent
   ],
   imports: [
     BrowserModule,

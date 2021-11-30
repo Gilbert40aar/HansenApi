@@ -14,36 +14,36 @@
     <div class="about-col">
       <section class="infobox">
         <p class="infoboxTitle">
-          <span class="red-text">UI/UX</span>
-          <span class="black-text">Designer &amp; Developer</span>
+          <span class="red-text">Student</span>
+          <span class="black-text">Computer Developer</span>
         </p>
         <div class="info-flex">
           <div class="info-col">
             <section class="info-group">
-              <label>Birthday:</label><span class="info-text">1 April 1990</span>
+              <label>Birthday:</label><span class="info-text">{{birthday}}</span>
             </section>
             <section class="info-group">
-              <label>Website:</label><span class="info-text">www.palmertech.com</span>
+              <label>Website:</label><span class="info-text">www.jp-pro.dk</span>
             </section>
             <section class="info-group">
-              <label>Phone:</label><span class="info-text">+123 456 7890</span>
+              <label>Phone:</label><span class="info-text">{{profile.contact?.phone}}</span>
             </section>
             <section class="info-group">
-              <label>City:</label><span class="info-text">Starling City, USA</span>
+              <label>City:</label><span class="info-text">{{profile.location.city}}, {{profile.location.country}}</span>
             </section>
           </div>
           <div class="info-col">
             <section class="info-group">
-              <label>Age:</label><span class="info-text">30</span>
+              <label>Age:</label><span class="info-text">{{age}}</span>
             </section>
             <section class="info-group">
-              <label>Degree:</label><span class="info-text">Phd</span>
+              <label>Degree:</label><span class="info-text">Student</span>
             </section>
             <section class="info-group">
-              <label>Mail:</label><span class="info-text">rpalmer@palmertech.com</span>
+              <label>Mail:</label><span class="info-text">{{profile.contact?.email}}</span>
             </section>
             <section class="info-group">
-              <label>Freelance:</label><span class="info-text">Available</span>
+              <label>Freelance:</label><span class="info-text">{{profile.status?.work}}</span>
             </section>
           </div>
         </div>

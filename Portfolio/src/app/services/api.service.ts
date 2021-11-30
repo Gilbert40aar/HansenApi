@@ -100,8 +100,16 @@ export class ApiService {
     return this.http.get<IContact[]>(this.baseUrl + 'Contacts/GetAllContacts');
   }
 
-  getProfileData(id: any): Observable<IProfile> {
+  getProfileData(): Observable<IProfile[]> {
+    return this.http.get<IProfile[]>(this.baseUrl + 'Profiles/GetAllProfiles');
+  }
+
+  getSingleProfileData(id: any): Observable<IProfile> {
     return this.http.get<IProfile>(this.baseUrl + 'Profiles/' + id);
+  }
+
+  getMyProfileData(): Observable<IProfile> {
+    return this.http.get<IProfile>(this.baseUrl + 'Profiles/MyProfile');
   }
 
   getProfileCount(): Observable<IProfile[]> {

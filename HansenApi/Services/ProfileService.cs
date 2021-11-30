@@ -37,11 +37,19 @@ namespace HansenApi.Services
                 secondName = obj.secondName,
                 lastName = obj.lastName,
                 locationId = obj.locationId,
+                Location = obj.Location,
                 statusId = obj.statusId,
+                Status = obj.Status,
                 descripTion = obj.descripTion,
                 contactId = obj.contactId,
+                Contact = obj.Contact,
                 birthDay = obj.birthDay
             }).ToList();
+        }
+
+        public async Task<Profile> MyProfile()
+        {
+            return await _context.MyProfile();
         }
 
         public async Task<Profile> GetProfile(int ProfileId)

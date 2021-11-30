@@ -46,6 +46,19 @@ namespace HansenApi.Controllers
             }
         }
 
+        // GET: api/Profiles/MyProfile
+        [HttpGet("MyProfile")]
+        public async Task<ActionResult<Profile>> MyProfile()
+        {
+            try
+            {
+                return Ok(await _context.MyProfile());
+            } catch (Exception e)
+            {
+                return Problem(e.Message);
+            }
+        }
+
         // GET: api/Profiles/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Profile>> GetProfile(int id)

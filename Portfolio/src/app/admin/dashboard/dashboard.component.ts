@@ -14,10 +14,10 @@ export class DashboardComponent implements OnInit {
 
   work: IWork[] = [];
   education: IEducation[] = [];
-  public workCount = '0';
-  public visitorsCount = '0';
-  public educationCount = '0';
-  public projectCount = '0';
+  workCount: Number = 0;
+  visitorsCount: Number = 0;
+  educationCount: Number = 0;
+  projectCount: Number = 0;
 
   ngOnInit(): void {
     this.getWork();
@@ -28,9 +28,9 @@ export class DashboardComponent implements OnInit {
     this.api.getWorkData().subscribe(data => {
       this.work = data;
       if(this.work == null || this.work == undefined) {
-        this.workCount = '0';
+        this.workCount = 0;
       } else {
-        this.workCount = this.education.length.toString();
+        this.workCount = this.work.length;
       }
 
     });
@@ -40,9 +40,9 @@ export class DashboardComponent implements OnInit {
     this.api.getEducationData().subscribe(data => {
       this.education = data;
       if(this.education == null || this.education == undefined) {
-        this.educationCount = '0';
+        this.educationCount = 0;
       } else {
-        this.educationCount = this.education.length.toString();
+        this.educationCount = this.education.length;
       }
     });
   }

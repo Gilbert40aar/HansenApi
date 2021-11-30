@@ -1,0 +1,71 @@
+<div class="page-header">
+  <h2 class="header-title">Create Profile</h2>
+  <div class="btn-row">
+    <a routerLink="../profile" class="btn">Profile Info</a>
+    <a routerLink="../createprofile" class="btn"><i class="fa fa-address-card-o"></i></a>
+    <a routerLink="../editprofile" class="btn"><i class="fa fa-pencil"></i></a>
+  </div>
+</div>
+<form [formGroup]="profileForm">
+  <div class="container-row">
+      <div class="col">
+          <div class="form-group">
+              <label>Firstname</label>
+              <input type="text" formControlName="firstName" id="" class="form-control">
+          </div>
+          <div class="form-group">
+              <label>Secondname</label>
+              <input type="text" formControlName="secondName" id="" class="form-control">
+          </div>
+          <div class="form-group">
+              <label>Lastname</label>
+              <input type="text" formControlName="lastName" id="" class="form-control">
+          </div>
+          <div class="form-group">
+              <label>Location</label>
+              <select formControlName="locationId" #LocationList class="form-control">
+                <option>Please select location info</option>
+                <option *ngFor="let item of location" [value]="item.locationId">
+                    Adr: {{item.addRess}} - Post: {{item.zipCode}} - By: {{item.city}} - Land: {{item.country}}
+                </option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label>Status</label>
+              <select formControlName="statusId" id="" class="form-control">
+                <option>Please select status info</option>
+                <option *ngFor="let sta of status" #Options [value]="sta.statusId">
+                  Work: {{sta.work}} - Employee: {{sta.employee}}
+                </option>
+              </select>
+          </div>
+      </div>
+      <div class="col">
+          <div class="form-group">
+              <label>Contact</label>
+              <select formControlName="contactId" id="" class="form-control">
+                <option>Please select contact info</option>
+                <option *ngFor="let con of contact" [value]="con.contactId">
+                  Phone: {{con.phone}} - Email: {{con.email}}
+                </option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label>Birthday</label>
+              <input type="text" placeholder="yyyy-mm-dd" formControlName="birthDay" id="" class="form-control">
+          </div>
+      </div>
+  </div>
+  <div class="container-row">
+      <div class="col">
+          <div class="form-group">
+              <label>About</label>
+              <textarea formControlName="descripTion" class="form-control"></textarea>
+          </div>
+      </div>
+  </div>
+  <div class="btn-row">
+      <button type="submit" (click)="profileHandler(profileForm.value)" class="btn btn-create">Save Details</button>
+      <button type="reset" class="btn btn-clear">Clear Details</button>
+  </div>
+  </form>
