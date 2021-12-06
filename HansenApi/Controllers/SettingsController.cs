@@ -62,7 +62,7 @@ namespace HansenApi.Controllers
 
         // PUT: api/Settings/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
+        [HttpPut("UpdateSettings/{id}")]
         public async Task<IActionResult> PutSettings(int id, Settings settings)
         {
             try

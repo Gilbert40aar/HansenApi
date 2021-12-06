@@ -62,7 +62,7 @@ namespace HansenApi.Controllers
 
         // PUT: api/Skills/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
+        [HttpPut("UpdateSkills/{id}")]
         public async Task<IActionResult> PutSkills(int id, Skills skills)
         {
             try

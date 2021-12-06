@@ -62,7 +62,7 @@ namespace HansenApi.Controllers
 
         // PUT: api/Genres/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
+        [HttpPut("UpdateGenres/{id}")]
         public async Task<IActionResult> PutGenre(int id, Genre genre)
         {
             try

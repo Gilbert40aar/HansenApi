@@ -62,7 +62,7 @@ namespace HansenApi.Controllers
 
         // PUT: api/Locations/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
+        [HttpPut("UpdateLocations/{id}")]
         public async Task<IActionResult> PutLocation(int id, Location location)
         {
             try
