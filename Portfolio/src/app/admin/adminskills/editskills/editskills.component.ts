@@ -12,6 +12,7 @@ import { ApiService } from 'src/app/services/api.service';
 export class EditskillsComponent implements OnInit {
 
   skillsForm = new FormGroup({
+    skillsId: new FormControl(),
     skillsTitle: new FormControl(),
     skillsIcon: new FormControl(),
     skillsPoints: new FormControl()
@@ -27,14 +28,16 @@ export class EditskillsComponent implements OnInit {
 
   getSkillData(id: any) {
     this.api.getSingleSkillData(id).subscribe(obj => {
-      this.skill = obj;
+      this.skillsForm.setValue(obj);
     });
   }
 
   skillsHandler(skillObj: ISkillGenre) {
-    console.log(skillObj);
-    window.localStorage.removeItem('skillsId');
-    this.router.navigate(['admin/skills']);
+    this.api.updateSkill(skillObj).subscribe(data => {
+      window.localStorage.removeItem('skillsId');
+      this.router.navigate(['admin/skills']);
+    });
+
   }
 
 }

@@ -12,6 +12,7 @@ import { ApiService } from 'src/app/services/api.service';
 export class EditeducationComponent implements OnInit {
 
   eduForm = new FormGroup({
+    educationId: new FormControl(),
     educationTitle: new FormControl(),
     school: new FormControl(),
     addRess: new FormControl(),
@@ -33,12 +34,15 @@ export class EditeducationComponent implements OnInit {
   }
 
   getEducation(id: any) {
-    this.api.getSingleEducationData(id).subscribe(data => this.edu = data);
+    this.api.getSingleEducationData(id).subscribe(data => this.eduForm.setValue(data));
   }
 
   educationHandler(eduObj: IEducation) {
-    window.localStorage.removeItem('educationId');
-    this.router.navigate(['admin/education']);
+    this.api.updateEducation(eduObj).subscribe(data => {
+      window.localStorage.removeItem('educationId');
+      this.router.navigate(['admin/education']);
+    });
+
   }
 
 }

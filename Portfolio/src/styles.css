@@ -1284,6 +1284,7 @@ height: 200px;
   cursor: pointer;
   width: 160px;
   border-radius: 20px;
+  margin-bottom: 50px;
 }
 
 /* This is for animation, Don't know if I turn it on yet */

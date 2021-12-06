@@ -12,6 +12,7 @@ import { ApiService } from 'src/app/services/api.service';
 export class EditworkComponent implements OnInit {
 
   workForm = new FormGroup({
+    workId: new FormControl(),
     workTitle: new FormControl(),
     company: new FormControl(),
     addRess: new FormControl(),
@@ -19,7 +20,8 @@ export class EditworkComponent implements OnInit {
     city: new FormControl(),
     startDate: new FormControl(),
     endDate: new FormControl(),
-    descripTion: new FormControl()
+    descripTion: new FormControl(),
+    skillsId: new FormControl()
   });
 
   work: IWork = {};
@@ -31,12 +33,17 @@ export class EditworkComponent implements OnInit {
   }
 
   getWork(id: any) {
-    this.api.getSingleWorkData(id).subscribe(obj => {this.work = obj; console.log(this.work)});
+    this.api.getSingleWorkData(id).subscribe(obj => {
+      this.workForm.setValue(obj);
+    });
   }
 
   workHandler(workObj: IWork) {
-    window.localStorage.removeItem('workId');
-    this.router.navigate(['admin/work']);
+    this.api.updateWork(workObj).subscribe(data => {
+      window.localStorage.removeItem('workId');
+      this.router.navigate(['admin/work']);
+    });
+
   }
 
 }

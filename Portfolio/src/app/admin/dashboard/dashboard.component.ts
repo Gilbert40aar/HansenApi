@@ -19,11 +19,12 @@ export class DashboardComponent implements OnInit {
   workCount: Number = 0;
   visitorsCount: Number = 0;
   educationCount: Number = 0;
-  projectCount: Number = 0;
+  skillCount: Number = 0;
 
   ngOnInit(): void {
     this.getWork();
     this.getEducation();
+    this.getSkills();
   }
 
   getWork() {
@@ -53,9 +54,9 @@ export class DashboardComponent implements OnInit {
     this.api.getAllSkills().subscribe(data => {
       this.skills = data;
       if(this.skills == null || this.skills == undefined) {
-        this.educationCount = 0;
+        this.skillCount = 0;
       } else {
-        this.educationCount = this.education.length;
+        this.skillCount = this.skills.length;
       }
     });
   }

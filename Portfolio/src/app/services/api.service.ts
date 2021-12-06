@@ -7,6 +7,7 @@ import { IEducation } from '../interfaces/ieducation';
 import { ILocation } from '../interfaces/ilocation';
 import { ILogin } from '../interfaces/ilogin';
 import { IProfile } from '../interfaces/iprofile';
+import { IProjects } from '../interfaces/iprojects';
 import { ISkillGenre } from '../interfaces/iskill-genre';
 import { IStatus } from '../interfaces/istatus';
 import { IToken } from '../interfaces/itoken';
@@ -94,6 +95,62 @@ export class ApiService {
       'Content-Type': 'application/json; charset=UTF-8'
     });
     return this.http.put(this.baseUrl + 'Profiles/UpdateProfile/' + data.profileId, body, {headers: headers});
+  }
+
+  updateContact(data: IContact): Observable<Object> {
+    const body = JSON.stringify(data);
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json; charset=UTF-8'
+    });
+    return this.http.put(this.baseUrl + 'Contacts/UpdateContacts/' + data.contactId, body, {headers: headers});
+  }
+
+  updateEducation(data: IEducation): Observable<Object> {
+    const body = JSON.stringify(data);
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json; charset=UTF-8'
+    });
+    return this.http.put(this.baseUrl + 'Educations/UpdateEducations/' + data.educationId, body, {headers: headers});
+  }
+
+  updateLocation(data: ILocation): Observable<Object> {
+    const body = JSON.stringify(data);
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json; charset=UTF-8'
+    });
+    return this.http.put(this.baseUrl + 'Locations/UpdateLocations/' + data.locationId, body, {headers: headers});
+  }
+
+  updateProject(data: IProjects): Observable<Object> {
+    const body = JSON.stringify(data);
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json; charset=UTF-8'
+    });
+    return this.http.put(this.baseUrl + 'Projects/UpdateProjects/' + data.projectId, body, {headers: headers});
+  }
+
+  updateSkill(data: ISkillGenre): Observable<Object> {
+    const body = JSON.stringify(data);
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json; charset=UTF-8'
+    });
+    return this.http.put(this.baseUrl + 'Skills/UpdateSkills/' + data.skillsId, body, {headers: headers});
+  }
+
+  updateStatus(data: IStatus): Observable<Object> {
+    const body = JSON.stringify(data);
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json; charset=UTF-8'
+    });
+    return this.http.put(this.baseUrl + 'Status/UpdateStatus/' + data.statusId, body, {headers: headers});
+  }
+
+  updateWork(data: IWork): Observable<Object> {
+    const body = JSON.stringify(data);
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json; charset=UTF-8'
+    });
+    return this.http.put(this.baseUrl + 'Works/UpdateWork/' + data.workId, body, {headers: headers});
   }
 
   /* Getting data from the database */

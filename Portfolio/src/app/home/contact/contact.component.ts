@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { IProfile } from 'src/app/interfaces/iprofile';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-contact',
@@ -15,9 +17,18 @@ export class ContactComponent implements OnInit {
     message: new FormControl()
   });
 
-  constructor() { }
+  profile: IProfile = {};
+
+  constructor(private api: ApiService) { }
 
   ngOnInit(): void {
+    this.getProfile();
+  }
+
+  getProfile() {
+    this.api.getMyProfileData().subscribe(data => {
+      this.profile = data;
+    })
   }
 
 }
