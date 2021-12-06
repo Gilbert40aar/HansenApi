@@ -46,9 +46,9 @@ namespace HansenApi.Services
             return await _context.GetProjects(ProjectsId);
         }
 
-        public Task<Projects> UpdateProjects(int ProjectsId, Projects _Projects)
+        public async Task<Projects> UpdateProjects(int ProjectsId, Projects _Projects)
         {
-            throw new NotImplementedException();
+            return await _context.UpdateProjects(ProjectsId, _Projects);
         }
     }
 }

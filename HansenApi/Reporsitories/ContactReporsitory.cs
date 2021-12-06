@@ -46,9 +46,11 @@ namespace HansenApi.Reporsitories
             return await _context.Contact.FindAsync(contactId);
         }
 
-        public Task<Contact> UpdateContact(int contactId, Contact _contact)
+        public async Task<Contact> UpdateContact(int contactId, Contact _contact)
         {
-            throw new NotImplementedException();
+            _context.Entry(_contact).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return null;
         }
     }
 }

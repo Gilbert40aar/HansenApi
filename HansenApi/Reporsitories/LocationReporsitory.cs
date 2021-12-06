@@ -46,9 +46,11 @@ namespace HansenApi.Reporsitories
             return await _context.Location.FindAsync(LocationId);
         }
 
-        public Task<Location> UpdateLocation(int LocationId, Location _Location)
+        public async Task<Location> UpdateLocation(int LocationId, Location _Location)
         {
-            throw new NotImplementedException();
+            _context.Entry(_Location).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return null;
         }
     }
 }

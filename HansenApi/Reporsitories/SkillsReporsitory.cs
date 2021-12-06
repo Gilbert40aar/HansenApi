@@ -46,9 +46,11 @@ namespace HansenApi.Reporsitories
             return await _context.Skills.FindAsync(SkillsId);
         }
 
-        public Task<Skills> UpdateSkills(int SkillsId, Skills _Skills)
+        public async Task<Skills> UpdateSkills(int SkillsId, Skills _Skills)
         {
-            throw new NotImplementedException();
+            _context.Entry(_Skills).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return null;
         }
     }
 }

@@ -57,9 +57,9 @@ namespace HansenApi.Services
             return await _context.GetProfile(ProfileId);
         }
 
-        public Task<Profile> UpdateProfile(int ProfileId, Profile _Profile)
+        public async Task<Profile> UpdateProfile(int profileId, Profile _Profile)
         {
-            throw new NotImplementedException();
+            return await _context.UpdateProfile(profileId, _Profile);
         }
     }
 }

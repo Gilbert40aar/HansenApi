@@ -51,9 +51,9 @@ namespace HansenApi.Services
             return await _context.GetEducation(EducationId);
         }
 
-        public Task<Education> UpdateEducation(int EducationId, Education _Education)
+        public async Task<Education> UpdateEducation(int EducationId, Education _Education)
         {
-            throw new NotImplementedException();
+            return await _context.UpdateEducation(EducationId, _Education);
         }
     }
 }

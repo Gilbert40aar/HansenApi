@@ -46,9 +46,11 @@ namespace HansenApi.Reporsitories
             return await _context.Settings.FindAsync(SettingsId);
         }
 
-        public Task<Settings> UpdateSettings(int SettingsId, Settings _Settings)
+        public async Task<Settings> UpdateSettings(int SettingsId, Settings _Settings)
         {
-            throw new NotImplementedException();
+            _context.Entry(_Settings).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return null;
         }
     }
 }

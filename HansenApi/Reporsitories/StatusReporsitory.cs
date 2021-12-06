@@ -46,9 +46,11 @@ namespace HansenApi.Reporsitories
             return await _context.Status.FindAsync(StatusId);
         }
 
-        public Task<Status> UpdateStatus(int StatusId, Status _Status)
+        public async Task<Status> UpdateStatus(int StatusId, Status _Status)
         {
-            throw new NotImplementedException();
+            _context.Entry(_Status).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return null;
         }
     }
 }

@@ -27,6 +27,8 @@ export class AdminworkComponent implements OnInit {
   }
 
   editWork(obj: IWork) {
+    console.log(obj);
+
     window.localStorage.setItem('workId', obj.workId);
   }
 

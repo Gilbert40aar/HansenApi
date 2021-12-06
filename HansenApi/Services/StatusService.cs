@@ -43,9 +43,9 @@ namespace HansenApi.Services
             return await _context.GetStatus(StatusId);
         }
 
-        public Task<Status> UpdateStatus(int StatusId, Status _Status)
+        public async Task<Status> UpdateStatus(int StatusId, Status _Status)
         {
-            throw new NotImplementedException();
+            return await _context.UpdateStatus(StatusId, _Status);
         }
     }
 }

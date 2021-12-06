@@ -45,9 +45,9 @@ namespace HansenApi.Services
             return await _context.GetLocation(LocationId);
         }
 
-        public Task<Location> UpdateLocation(int LocationId, Location _Location)
+        public async Task<Location> UpdateLocation(int LocationId, Location _Location)
         {
-            throw new NotImplementedException();
+            return await _context.UpdateLocation(LocationId, _Location);
         }
     }
 }

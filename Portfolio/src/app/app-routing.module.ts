@@ -10,6 +10,9 @@ import { EditprofileComponent } from './admin/adminprofile/editprofile/editprofi
 import { ProfilecontactComponent } from './admin/adminprofile/profilecontact/profilecontact.component';
 import { ProfilelocationComponent } from './admin/adminprofile/profilelocation/profilelocation.component';
 import { ProfilestatusComponent } from './admin/adminprofile/profilestatus/profilestatus.component';
+import { AddprojectComponent } from './admin/adminproject/addproject/addproject.component';
+import { AdminprojectComponent } from './admin/adminproject/adminproject.component';
+import { EditprojectComponent } from './admin/adminproject/editproject/editproject.component';
 import { AdminskillsComponent } from './admin/adminskills/adminskills.component';
 import { CreateskillsComponent } from './admin/adminskills/createskills/createskills.component';
 import { CsharpComponent } from './admin/adminskills/createskills/csharp/csharp.component';
@@ -56,7 +59,10 @@ const routes: Routes = [
     {path: 'createSkillGenre', component: CreateskillsgenreComponent},
     {path: 'editSkill', component: EditskillsComponent},
     {path: 'createprofile', component: CreateprofileComponent},
-    {path: 'editprofile', component: EditprofileComponent}
+    {path: 'editprofile', component: EditprofileComponent},
+    {path: 'projects', component: AdminprojectComponent},
+    {path: 'addprojects', component: AddprojectComponent},
+    {path: 'editprojects', component: EditprojectComponent}
   ]}
 ];
 

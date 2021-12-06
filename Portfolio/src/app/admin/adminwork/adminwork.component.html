@@ -22,7 +22,7 @@
 
   <tbody>
     <tr *ngFor="let item of worklist">
-      <td><input type="radio" formControlName="workId" [value]="item.workId"></td>
+      <td><input type="radio" formControlName="workId" value="{{item.workId}}"></td>
       <td>{{item.workTitle}}</td>
       <td>{{item.company}}</td>
       <td>{{item.city}}</td>

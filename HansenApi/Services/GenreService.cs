@@ -42,9 +42,9 @@ namespace HansenApi.Services
             return await _context.GetGenre(GenreId);
         }
 
-        public Task<Genre> UpdateGenre(int GenreId, Genre _Genre)
+        public async Task<Genre> UpdateGenre(int GenreId, Genre _Genre)
         {
-            throw new NotImplementedException();
+            return await _context.UpdateGenre(GenreId, _Genre);
         }
     }
 }

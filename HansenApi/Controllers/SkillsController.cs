@@ -62,34 +62,17 @@ namespace HansenApi.Controllers
 
         // PUT: api/Skills/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        //[HttpPut("{id}")]
-        //public async Task<IActionResult> PutSkills(int id, Skills skills)
-        //{
-        //    if (id != skills.skillsId)
-        //    {
-        //        return BadRequest();
-        //    }
-
-        //    _context.Entry(skills).State = EntityState.Modified;
-
-        //    try
-        //    {
-        //        await _context.SaveChangesAsync();
-        //    }
-        //    catch (DbUpdateConcurrencyException)
-        //    {
-        //        if (!SkillsExists(id))
-        //        {
-        //            return NotFound();
-        //        }
-        //        else
-        //        {
-        //            throw;
-        //        }
-        //    }
-
-        //    return NoContent();
-        //}
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutSkills(int id, Skills skills)
+        {
+            try
+            {
+                return Ok(await _context.UpdateSkills(id, skills));
+            } catch (Exception e)
+            {
+                return Problem(e.Message);
+            }
+        }
 
         // POST: api/Skills
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754

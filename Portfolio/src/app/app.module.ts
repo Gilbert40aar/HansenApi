@@ -40,6 +40,12 @@ import { CreateprofileComponent } from './admin/adminprofile/createprofile/creat
 import { EditprofileComponent } from './admin/adminprofile/editprofile/editprofile.component';
 import { EducationComponent } from './home/resume/education/education.component';
 import { WorkComponent } from './home/resume/work/work.component';
+import { SkillsComponent } from './home/resume/skills/skills.component';
+import { ProjectComponent } from './home/works/project/project.component';
+import { InformationComponent } from './home/works/information/information.component';
+import { AdminprojectComponent } from './admin/adminproject/adminproject.component';
+import { AddprojectComponent } from './admin/adminproject/addproject/addproject.component';
+import { EditprojectComponent } from './admin/adminproject/editproject/editproject.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +83,13 @@ import { WorkComponent } from './home/resume/work/work.component';
     CreateprofileComponent,
     EditprofileComponent,
     EducationComponent,
-    WorkComponent
+    WorkComponent,
+    SkillsComponent,
+    ProjectComponent,
+    InformationComponent,
+    AdminprojectComponent,
+    AddprojectComponent,
+    EditprojectComponent
   ],
   imports: [
     BrowserModule,

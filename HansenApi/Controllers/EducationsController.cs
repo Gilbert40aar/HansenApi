@@ -62,34 +62,17 @@ namespace HansenApi.Controllers
 
         // PUT: api/Educations/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        //[HttpPut("{id}")]
-        //public async Task<IActionResult> PutEducation(int id, Education education)
-        //{
-        //    if (id != education.educationId)
-        //    {
-        //        return BadRequest();
-        //    }
-
-        //    _context.Entry(education).State = EntityState.Modified;
-
-        //    try
-        //    {
-        //        await _context.SaveChangesAsync();
-        //    }
-        //    catch (DbUpdateConcurrencyException)
-        //    {
-        //        if (!EducationExists(id))
-        //        {
-        //            return NotFound();
-        //        }
-        //        else
-        //        {
-        //            throw;
-        //        }
-        //    }
-
-        //    return NoContent();
-        //}
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutEducation(int id, Education education)
+        {
+            try
+            {
+                return Ok(await _context.UpdateEducation(id, education));
+            } catch(Exception e)
+            {
+                return Problem(e.Message);
+            }
+        }
 
         // POST: api/Educations
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754

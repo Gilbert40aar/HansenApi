@@ -64,9 +64,12 @@ namespace HansenApi.Reporsitories
             return profil;
         }
 
-        public Task<Profile> UpdateProfile(int ProfileId, Profile _Profile)
+        public async Task<Profile> UpdateProfile(int profileId, Profile _Profile)
         {
-            throw new NotImplementedException();
+            _context.Entry(_Profile).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return null;
+            
         }
     }
 }

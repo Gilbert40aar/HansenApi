@@ -62,34 +62,17 @@ namespace HansenApi.Controllers
 
         // PUT: api/Locations/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        //[HttpPut("{id}")]
-        //public async Task<IActionResult> PutLocation(int id, Location location)
-        //{
-        //    if (id != location.locationId)
-        //    {
-        //        return BadRequest();
-        //    }
-
-        //    _context.Entry(location).State = EntityState.Modified;
-
-        //    try
-        //    {
-        //        await _context.SaveChangesAsync();
-        //    }
-        //    catch (DbUpdateConcurrencyException)
-        //    {
-        //        if (!LocationExists(id))
-        //        {
-        //            return NotFound();
-        //        }
-        //        else
-        //        {
-        //            throw;
-        //        }
-        //    }
-
-        //    return NoContent();
-        //}
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutLocation(int id, Location location)
+        {
+            try
+            {
+                return Ok(await _context.UpdateLocation(id, location));
+            } catch(Exception e)
+            {
+                return Problem(e.Message);
+            }
+        }
 
         // POST: api/Locations
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754

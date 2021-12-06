@@ -62,34 +62,17 @@ namespace HansenApi.Controllers
 
         // PUT: api/Genres/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        //[HttpPut("{id}")]
-        //public async Task<IActionResult> PutGenre(int id, Genre genre)
-        //{
-        //    if (id != genre.genreId)
-        //    {
-        //        return BadRequest();
-        //    }
-
-        //    _context.Entry(genre).State = EntityState.Modified;
-
-        //    try
-        //    {
-        //        await _context.SaveChangesAsync();
-        //    }
-        //    catch (DbUpdateConcurrencyException)
-        //    {
-        //        if (!GenreExists(id))
-        //        {
-        //            return NotFound();
-        //        }
-        //        else
-        //        {
-        //            throw;
-        //        }
-        //    }
-
-        //    return NoContent();
-        //}
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutGenre(int id, Genre genre)
+        {
+            try
+            {
+                return Ok(await _context.UpdateGenre(id, genre));
+            } catch(Exception e)
+            {
+                return Problem(e.Message);
+            }
+        }
 
         // POST: api/Genres
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754

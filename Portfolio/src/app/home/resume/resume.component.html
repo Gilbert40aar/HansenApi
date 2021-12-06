@@ -43,30 +43,7 @@
         </h2>
       </span>
       <div class="skills-box">
-        <div class="skill-group" *ngFor="let item of skills">
-          <div class="label-group">
-            <label>{{item.skillsTitle}}</label><span>{{item.skillsPoints}}%</span>
-          </div>
-          <meter min="0" max="100"  value="{{item.skillsPoints}}"></meter>
-        </div>
-        <div class="skill-group">
-          <div class="label-group">
-            <label>CSS3</label><span>60%</span>
-          </div>
-          <meter min="0" max="100"  value="60"></meter>
-        </div>
-        <div class="skill-group">
-          <div class="label-group">
-            <label>JQuery</label><span>40%</span>
-          </div>
-          <meter min="0" max="100"  value="40"></meter>
-        </div>
-        <div class="skill-group">
-          <div class="label-group">
-            <label>Angular</label><span>40%</span>
-          </div>
-          <meter min="0" max="100"  value="40"></meter>
-        </div>
+        <app-skills *ngFor="let item of skills" [skill]="item"></app-skills>
       </div>
     </div>
     <div class="skills-col">

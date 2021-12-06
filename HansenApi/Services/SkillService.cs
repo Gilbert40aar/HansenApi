@@ -44,9 +44,9 @@ namespace HansenApi.Services
             return await _context.GetSkills(SkillsId);
         }
 
-        public Task<Skills> UpdateSkills(int SkillsId, Skills _Skills)
+        public async Task<Skills> UpdateSkills(int SkillsId, Skills _Skills)
         {
-            throw new NotImplementedException();
+            return await _context.UpdateSkills(SkillsId, _Skills);
         }
     }
 }

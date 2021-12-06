@@ -50,9 +50,9 @@ namespace HansenApi.Services
             return await _context.GetWork(WorkId);
         }
 
-        public Task<Work> UpdateWork(int WorkId, Work _Work)
+        public async Task<Work> UpdateWork(int WorkId, Work _Work)
         {
-            throw new NotImplementedException();
+            return await _context.UpdateWork(WorkId, _Work);
         }
     }
 }

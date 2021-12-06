@@ -13,7 +13,7 @@ namespace HansenApi.Interfaces
         public Task<Profile> GetProfile(int ProfileId);
         public Task<Profile> MyProfile();
         public Task<List<ProfileResponse>> GetAllProfiles();
-        public Task<Profile> UpdateProfile(int ProfileId, Profile _Profile);
+        public Task<Profile> UpdateProfile(int profileId, Profile _Profile);
         public Task<bool> DeleteProfile(int ProfileId);
     }
 }

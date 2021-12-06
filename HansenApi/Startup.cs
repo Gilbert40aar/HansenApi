@@ -42,6 +42,7 @@ namespace HansenApi
                 {
                     builder.AllowAnyOrigin()
                            .AllowAnyHeader()
+                           .WithMethods("GET", "PUT", "POST", "DELETE")
                            .AllowAnyMethod();
                 });
             });

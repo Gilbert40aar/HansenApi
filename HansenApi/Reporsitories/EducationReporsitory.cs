@@ -46,9 +46,11 @@ namespace HansenApi.Reporsitories
             return await _context.Education.FindAsync(EducationId);
         }
 
-        public Task<Education> UpdateEducation(int EducationId, Education _Education)
+        public async Task<Education> UpdateEducation(int EducationId, Education _Education)
         {
-            throw new NotImplementedException();
+            _context.Entry(_Education).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return null;
         }
     }
 }

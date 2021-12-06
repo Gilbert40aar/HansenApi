@@ -1,0 +1,31 @@
+<form [formGroup]="projectForm"></form>
+<div class="page-header">
+  <h2 class="header-title">Projects</h2>
+  <div class="btn-row">
+    <a routerLink="../projects" class="btn">Project Overview</a>
+    <a routerLink="../addprojects" class="btn"><i class="fa fa-plus"></i></a>
+    <a routerLink="../editprojects" (click)="editProject(projectForm.value)" class="btn"><i class="fa fa-pencil"></i></a>
+    <a routerLink="../projects" (click)="deleteProject(projectForm.value)" class="btn"><i class="fa fa-trash"></i></a>
+  </div>
+</div>
+<table class="table-borderless">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Project Name</th>
+      <th>Project Genre</th>
+      <th>Project Developer</th>
+      <th>Project Year</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let item of projectlist">
+      <td><input type="radio" formControlName="projectId" [value]="item.projectId"></td>
+      <td>{{item.projectTitle}}</td>
+      <td>{{item.genre}}</td>
+      <td>{{item.developer}}</td>
+      <td>{{item.projectYear}}</td>
+    </tr>
+  </tbody>
+</table>

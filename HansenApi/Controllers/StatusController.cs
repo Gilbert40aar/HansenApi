@@ -62,34 +62,17 @@ namespace HansenApi.Controllers
 
         // PUT: api/Status/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        //[HttpPut("{id}")]
-        //public async Task<IActionResult> PutStatus(int id, Status status)
-        //{
-        //    if (id != status.statusId)
-        //    {
-        //        return BadRequest();
-        //    }
-
-        //    _context.Entry(status).State = EntityState.Modified;
-
-        //    try
-        //    {
-        //        await _context.SaveChangesAsync();
-        //    }
-        //    catch (DbUpdateConcurrencyException)
-        //    {
-        //        if (!StatusExists(id))
-        //        {
-        //            return NotFound();
-        //        }
-        //        else
-        //        {
-        //            throw;
-        //        }
-        //    }
-
-        //    return NoContent();
-        //}
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutStatus(int id, Status status)
+        {
+            try
+            {
+                return Ok(await _context.UpdateStatus(id, status));
+            } catch (Exception e)
+            {
+                return Problem(e.Message);
+            }
+        }
 
         // POST: api/Status
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754

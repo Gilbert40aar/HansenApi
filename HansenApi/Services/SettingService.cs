@@ -46,9 +46,9 @@ namespace HansenApi.Services
             return await _context.GetSettings(SettingsId);
         }
 
-        public Task<Settings> UpdateSettings(int SettingsId, Settings _Settings)
+        public async Task<Settings> UpdateSettings(int SettingsId, Settings _Settings)
         {
-            throw new NotImplementedException();
+            return await _context.UpdateSettings(SettingsId, _Settings);
         }
     }
 }

@@ -75,34 +75,17 @@ namespace HansenApi.Controllers
 
         // PUT: api/Profiles/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        //[HttpPut("{id}")]
-        //public async Task<IActionResult> PutProfile(int id, Profile profile)
-        //{
-        //    if (id != profile.profileId)
-        //    {
-        //        return BadRequest();
-        //    }
-
-        //    _context.Entry(profile).State = EntityState.Modified;
-
-        //    try
-        //    {
-        //        await _context.SaveChangesAsync();
-        //    }
-        //    catch (DbUpdateConcurrencyException)
-        //    {
-        //        if (!ProfileExists(id))
-        //        {
-        //            return NotFound();
-        //        }
-        //        else
-        //        {
-        //            throw;
-        //        }
-        //    }
-
-        //    return NoContent();
-        //}
+        [HttpPut("UpdateProfile/{id}")]
+        public async Task<ActionResult<Profile>> PutProfile(int profileId, Profile profile)
+        {
+            try 
+            {
+                return Ok(await _context.UpdateProfile(profileId, profile));
+            } catch(Exception e)
+            {
+                return Problem(e.Message);
+            }        
+        }
 
         // POST: api/Profiles
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754

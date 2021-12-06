@@ -87,6 +87,15 @@ export class ApiService {
     return this.http.post<ISkillGenre>(this.baseUrl + 'Skills/CreateSkills', body, {headers: headers});
   }
 
+  /* Updating data in database */
+  updateProfile(data: IProfile): Observable<Object> {
+    const body = JSON.stringify(data);
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json; charset=UTF-8'
+    });
+    return this.http.put(this.baseUrl + 'Profiles/UpdateProfile/' + data.profileId, body, {headers: headers});
+  }
+
   /* Getting data from the database */
   getLocationData(): Observable<ILocation[]> {
     return this.http.get<ILocation[]>(this.baseUrl + 'Locations/GetAllLocations');

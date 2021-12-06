@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IProjects } from 'src/app/interfaces/iprojects';
 
 @Component({
   selector: 'app-works',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorksComponent implements OnInit {
 
+  projects: IProjects[] = [];
   constructor() { }
 
   ngOnInit(): void {

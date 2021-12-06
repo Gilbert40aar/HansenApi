@@ -16,7 +16,8 @@
   </section>
 
   <div class="projects-container">
-    <div class="projects-item">Project 1
+    <app-project *ngFor="let item of projects" [project]="item"></app-project>
+    <!-- <div class="projects-item">Project 1
       <div class="overlay">
         <div>
           <i class="fa fa-chain"></i><i class="fa fa-search"></i>
@@ -99,6 +100,6 @@
           <i class="fa fa-chain"></i><i class="fa fa-search"></i>
         </div>
         <span>My Projects</span></div>
-    </div>
+    </div> -->
   </div>
 </div>

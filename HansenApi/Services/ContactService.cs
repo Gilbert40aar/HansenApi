@@ -43,9 +43,9 @@ namespace HansenApi.Services
             return await _context.GetContact(contactId);
         }
 
-        public Task<Contact> UpdateContact(int contactId, Contact _contact)
+        public async Task<Contact> UpdateContact(int contactId, Contact _contact)
         {
-            throw new NotImplementedException();
+            return await _context.UpdateContact(contactId, _contact);
         }
     }
 }

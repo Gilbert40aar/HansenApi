@@ -46,9 +46,11 @@ namespace HansenApi.Reporsitories
             return await _context.Genre.FindAsync(GenreId);
         }
 
-        public Task<Genre> UpdateGenre(int GenreId, Genre _Genre)
+        public async Task<Genre> UpdateGenre(int GenreId, Genre _Genre)
         {
-            throw new NotImplementedException();
+            _context.Entry(_Genre).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return null;
         }
     }
 }

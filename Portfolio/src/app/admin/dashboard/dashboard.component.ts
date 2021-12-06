@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IEducation } from 'src/app/interfaces/ieducation';
+import { ISkillGenre } from 'src/app/interfaces/iskill-genre';
 import { IWork } from 'src/app/interfaces/iwork';
 import { ApiService } from 'src/app/services/api.service';
 
@@ -14,6 +15,7 @@ export class DashboardComponent implements OnInit {
 
   work: IWork[] = [];
   education: IEducation[] = [];
+  skills: ISkillGenre[] = [];
   workCount: Number = 0;
   visitorsCount: Number = 0;
   educationCount: Number = 0;
@@ -40,6 +42,17 @@ export class DashboardComponent implements OnInit {
     this.api.getEducationData().subscribe(data => {
       this.education = data;
       if(this.education == null || this.education == undefined) {
+        this.educationCount = 0;
+      } else {
+        this.educationCount = this.education.length;
+      }
+    });
+  }
+
+  getSkills() {
+    this.api.getAllSkills().subscribe(data => {
+      this.skills = data;
+      if(this.skills == null || this.skills == undefined) {
         this.educationCount = 0;
       } else {
         this.educationCount = this.education.length;
