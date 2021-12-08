@@ -26,8 +26,8 @@
         <td>{{item.educationTitle}}</td>
         <td>{{item.school}}</td>
         <td>{{item.city}}</td>
-        <td>{{item.startDate}}</td>
-        <td>{{item.endDate}}</td>
+        <td>{{item.startDate | date: 'dd-MM-YYYY'}}</td>
+        <td>{{item.endDate | date: 'dd-MM-YYYY'}}</td>
       </tr>
     </tbody>
   </table>

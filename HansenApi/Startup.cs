@@ -46,6 +46,7 @@ namespace HansenApi
                            .AllowAnyMethod();
                 });
             });
+            services.AddSignalR();
             services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Connection")));
             services.AddScoped<IAdminService, AdminService>();
             services.AddScoped<IAdminReporsitory, AdminReporsitory>();
@@ -69,6 +70,8 @@ namespace HansenApi
             services.AddScoped<IStatusReporsitory, StatusReporsitory>();
             services.AddScoped<IWorkService, WorkService>();
             services.AddScoped<IWorkReporsitory, WorkReporsitory>();
+            services.AddScoped<IMessagesService, MessagesService>();
+            services.AddScoped<IMessagesReporsitory, MessageReporsitory>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -117,6 +120,10 @@ namespace HansenApi
             app.UseRouting();
             app.UseCors(_policyName);
             app.UseAuthorization();
+
+            app.UseEndpoints(endpoints => {
+                endpoints.MapHub<BroadcastHub>("/notify");
+                });
 
             app.UseEndpoints(endpoints =>
             {

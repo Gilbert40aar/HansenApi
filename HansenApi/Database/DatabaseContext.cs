@@ -25,5 +25,7 @@ namespace HansenApi.Database
         public DbSet<Skills> Skills { get; set; }
         public DbSet<Status> Status { get; set; }
         public DbSet<Work> Work { get; set; }
+        public DbSet<Messages> Messages { get; set; }
+        public DbSet<Notification> Notification { get; set; }
     }
 }

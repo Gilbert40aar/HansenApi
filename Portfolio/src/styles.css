@@ -206,6 +206,49 @@ body {
   padding: 3px 10px;
   cursor: pointer;
   transition: ease-in-out .4s;
+  position: relative;
+}
+
+.header .collapse-navbar .navbar-nav .nav-item .badge {
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  background-color: red;
+  color: white;
+  border-radius: 7.5px;
+  top: 0px;
+  right: 0px;
+  line-height: 15px;
+  font-weight: bold;
+  position: absolute;
+  font-size: 10px;
+}
+
+.header .collapse-navbar .navbar-nav .nav-item .dropdown {
+  display: none;
+}
+
+.header .collapse-navbar .navbar-nav .nav-item:hover .dropdown {
+  display: block;
+  position: absolute;
+  top: 45px;
+  width: 350px;
+  left: -300px;
+  border: 2px solid #333;
+  border-radius: 0 0 10px 10px;
+  background-color: #333;
+
+}
+
+.header .collapse-navbar .navbar-nav .nav-item .dropdown .messagebox {
+  padding: 5px;
+  border-bottom: 2px solid var(--pumpkin-orange);
+  color: var(--text-light);
+  font-size: 12px;
+}
+
+.header .collapse-navbar .navbar-nav .nav-item .dropdown .messagebox:last-child {
+  border-bottom: 0;
 }
 
 .header .collapse-navbar .navbar-nav .nav-item:last-child {
@@ -395,6 +438,9 @@ body {
   background-color: var(--bg-danger);
   color: var(--text-light);
 }
+
+/* Here will the styling of the settings page in admin come */
+
 
 /* Here will the styling for the profile page in admin come */
 .container .main .card {

@@ -11,6 +11,9 @@
           "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
+      "Microsoft.AspNet.SignalR/2.4.2": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.12": {
         "type": "package",
         "dependencies": {
@@ -2114,6 +2117,18 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Microsoft.AspNet.SignalR/2.4.2": {
+      "sha512": "8NAm5wmNP+NkqnKqFKWcj7F2JMaQSsqDq5Nx3LnaMmJgHsHYiCx3hAXzXo+047AcJCtYyAvVRUyjWS4NIpEn2A==",
+      "type": "package",
+      "path": "microsoft.aspnet.signalr/2.4.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "microsoft.aspnet.signalr.2.4.2.nupkg.sha512",
+        "microsoft.aspnet.signalr.nuspec",
+        "packageIcon.png"
       ]
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.12": {
@@ -7326,6 +7341,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Microsoft.AspNet.SignalR >= 2.4.2",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.12",
       "Microsoft.EntityFrameworkCore >= 5.0.12",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.12",
@@ -7381,6 +7397,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "Microsoft.AspNet.SignalR": {
+            "target": "Package",
+            "version": "[2.4.2, )"
+          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[5.0.12, )"

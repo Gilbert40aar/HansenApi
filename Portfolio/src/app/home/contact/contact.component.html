@@ -28,6 +28,7 @@
 <div class="row" id="row-center">
   <section class="form-container">
     <form [formGroup]="contactForm">
+      <input type="hidden" formControlName="readOrNot" value="1">
       <div class="input-group">
         <input type="text" formControlName="fullName" name="fullName" placeholder="Your Name*" class="form-control">
         <input type="email" formControlName="email" name="email" placeholder="Your Email*" class="form-control">
@@ -38,7 +39,7 @@
       <div class="input-group">
         <textarea formControlName="message" name="message" placeholder="Your message..." class="form-control"></textarea>
       </div>
-      <button type="submit" class="btn">Send Message</button>
+      <button type="submit" class="btn" (click)="sendMailHandler(contactForm.value)">Send Message</button>
     </form>
   </section>
 </div>

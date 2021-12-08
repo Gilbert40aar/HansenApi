@@ -22,6 +22,9 @@ import { AdminworkComponent } from './admin/adminwork/adminwork.component';
 import { CreateworkComponent } from './admin/adminwork/creatework/creatework.component';
 import { EditworkComponent } from './admin/adminwork/editwork/editwork.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { CreatesettingsComponent } from './admin/settings/createsettings/createsettings.component';
+import { EditsettingsComponent } from './admin/settings/editsettings/editsettings.component';
+import { SettingsComponent } from './admin/settings/settings.component';
 import { AboutComponent } from './home/about/about.component';
 import { ContactComponent } from './home/contact/contact.component';
 import { FrontpageComponent } from './home/frontpage/frontpage.component';
@@ -62,7 +65,10 @@ const routes: Routes = [
     {path: 'editprofile', component: EditprofileComponent},
     {path: 'projects', component: AdminprojectComponent},
     {path: 'addprojects', component: AddprojectComponent},
-    {path: 'editprojects', component: EditprojectComponent}
+    {path: 'editprojects', component: EditprojectComponent},
+    {path: 'settings', component: SettingsComponent},
+    {path: 'createSettings', component: CreatesettingsComponent},
+    {path: 'editSettings', component: EditsettingsComponent}
   ]}
 ];
 

@@ -1,0 +1,5 @@
+<div class="messagebox" *ngIf="unread.readOrNot != 1">
+  <section class="boxbody">{{unread.sendDate | date: 'dd-MM-YYY'}}</section>
+  <section class="boxbody">{{unread.fullName}}</section>
+  <section class="boxbody">{{unread.subject}}</section>
+</div>

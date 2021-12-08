@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "B6t+mm5/DN4u+/gMLD/VqEu8HTwiSLMlJ7q0Ucu+DAPfJL18qkI7fOHu5BDbwGUAPC1XciiC4V2ft+MhdTFG2g==",
+  "dgSpecHash": "T4l+hudXLSj/G3Msg73CIO7QNBSkAgz1B4LA3nbcKkvUiv5i0m858cbQjxYsTsaCs8g7kSknwrDWBhOkYGqArQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\micha\\source\\repos\\HansenApi\\HansenApi\\HansenApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\micha\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\micha\\.nuget\\packages\\microsoft.aspnet.signalr\\2.4.2\\microsoft.aspnet.signalr.2.4.2.nupkg.sha512",
     "C:\\Users\\micha\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.12\\microsoft.aspnetcore.authentication.jwtbearer.5.0.12.nupkg.sha512",
     "C:\\Users\\micha\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\micha\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

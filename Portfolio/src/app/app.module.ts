@@ -46,6 +46,10 @@ import { InformationComponent } from './home/works/information/information.compo
 import { AdminprojectComponent } from './admin/adminproject/adminproject.component';
 import { AddprojectComponent } from './admin/adminproject/addproject/addproject.component';
 import { EditprojectComponent } from './admin/adminproject/editproject/editproject.component';
+import { MessagesComponent } from './admin/adminheader/messages/messages.component';
+import { SettingsComponent } from './admin/settings/settings.component';
+import { CreatesettingsComponent } from './admin/settings/createsettings/createsettings.component';
+import { EditsettingsComponent } from './admin/settings/editsettings/editsettings.component';
 
 @NgModule({
   declarations: [
@@ -89,7 +93,11 @@ import { EditprojectComponent } from './admin/adminproject/editproject/editproje
     InformationComponent,
     AdminprojectComponent,
     AddprojectComponent,
-    EditprojectComponent
+    EditprojectComponent,
+    MessagesComponent,
+    SettingsComponent,
+    CreatesettingsComponent,
+    EditsettingsComponent
   ],
   imports: [
     BrowserModule,

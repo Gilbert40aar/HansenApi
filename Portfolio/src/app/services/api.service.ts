@@ -6,8 +6,10 @@ import { IContact } from '../interfaces/icontact';
 import { IEducation } from '../interfaces/ieducation';
 import { ILocation } from '../interfaces/ilocation';
 import { ILogin } from '../interfaces/ilogin';
+import { IMessage } from '../interfaces/imessage';
 import { IProfile } from '../interfaces/iprofile';
 import { IProjects } from '../interfaces/iprojects';
+import { ISetting } from '../interfaces/isetting';
 import { ISkillGenre } from '../interfaces/iskill-genre';
 import { IStatus } from '../interfaces/istatus';
 import { IToken } from '../interfaces/itoken';
@@ -30,6 +32,14 @@ export class ApiService {
       'Content-Type': 'application/json; charset=UTF-8'
     });
     return this.http.post<IAdmin>(this.baseUrl + 'Admins/CreateAdmin', body, {headers: headers});
+  }
+
+  saveMessage(data: IMessage): Observable<IMessage> {
+    const body = JSON.stringify(data);
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json; charset=UTF-8'
+    });
+    return this.http.post<IMessage>(this.baseUrl + 'Messages/CreateMessage', body, {headers: headers});
   }
 
   saveProfile(data: IProfile): Observable<Object> {
@@ -169,6 +179,12 @@ export class ApiService {
   getProfileData(): Observable<IProfile[]> {
     return this.http.get<IProfile[]>(this.baseUrl + 'Profiles/GetAllProfiles');
   }
+
+  getSettings(): Observable<ISetting[]> {
+    return this.http.get<ISetting[]>(this.baseUrl + 'Settings/GetAllSettings');
+  }
+
+  /* Get single objects */
 
   getSingleProfileData(id: any): Observable<IProfile> {
     return this.http.get<IProfile>(this.baseUrl + 'Profiles/' + id);

@@ -23,7 +23,7 @@ export class AdminskillsComponent implements OnInit {
 
   getSkills() {
     this.api.getAllSkills().subscribe(data => {
-      console.log(data);
+      //console.log(data);
       this.skillslist = data;
     });
   }
